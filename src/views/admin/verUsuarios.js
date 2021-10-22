@@ -21,6 +21,7 @@ function VerUsuarios (){
     }).then((response) => {
         console.log(response.data)
         if (response.data === false) {
+            window.location.replace('./');
             swal({
                 title: "Acceso Denegado",
                 text: "Primero inicie Sesion",
@@ -29,12 +30,12 @@ function VerUsuarios (){
             window.location.replace('./');
         }
         if(response.data.mensaje === false){
+            window.location.replace('./home');
             swal({
                 title:"Advertencia",
                 text:"Usted no es Administrador",
                 icon:"warning"
             })
-            setTimeout(1000)
             window.location.replace('./home');
         }
     });
