@@ -26,7 +26,7 @@ function VerUsuarios (){
                 text: "Primero inicie Sesion",
                 icon: "warning"
             });
-            setValidacion(false)
+            window.location.replace('./');
         }
         if(response.data.mensaje === false){
             swal({
@@ -34,7 +34,7 @@ function VerUsuarios (){
                 text:"Usted no es Administrador",
                 icon:"warning"
             })
-            setTimeout(2000)
+            setTimeout(1000)
             window.location.replace('./home');
         }
     });

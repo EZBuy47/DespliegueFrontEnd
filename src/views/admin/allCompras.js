@@ -26,7 +26,7 @@ function AllCompras() {
                 text: "Primero inicie Sesion",
                 icon: "warning"
             });
-            setValidacion(false)
+            window.location.replace('./');
         }
         if(response.data.mensaje === false){
             swal({
@@ -37,9 +37,6 @@ function AllCompras() {
             window.location.replace('./home');
         }
     });
-    if (validacion === false) {
-        window.location.replace('./');
-    }
     try {
         const verificar = jwt.verify(cook, process.env.REACT_APP_TOKEN_SECRET);
         id = verificar.id
