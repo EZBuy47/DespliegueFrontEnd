@@ -44,7 +44,7 @@ function Agregar() {
     }
 
     const enviarDatos = () => {
-        axios.post('https://ezbuyb.herokuapp.com/product/addproduct', {
+        axios.post('https://ezbuyb.herokuapp.com/api/product/addproduct', {
             name: name,
             reference: reference,
             price: price,
