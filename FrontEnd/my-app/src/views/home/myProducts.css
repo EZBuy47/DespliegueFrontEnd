@@ -1,0 +1,12 @@
+.productos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px
+}
+.card{  
+    display: inline-flex;
+}
+.Actualizar{
+    border-radius: 5%;
+}

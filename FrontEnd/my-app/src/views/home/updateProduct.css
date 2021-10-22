@@ -1,0 +1,109 @@
+.botonesUpdate{
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+}
+.actualizar span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+.actualizar{
+    text-decoration: none;
+    background-color: none;
+    border-radius: 10%;
+    border: 1px black;
+    color: black;
+    transition: .3s ease all;
+    position: relative;
+    overflow: hidden;
+}
+.actualizar:hover{
+    color: black;
+    cursor: pointer;
+}
+.actualizar::after{
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: none;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transition: .5s ease-in-out all;
+}
+.actualizar:hover::after{
+    transform: scale(200);
+    background-color: rgb(18, 226, 18);
+}
+.borrar span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+.borrar{
+    text-decoration: none;
+    background-color: none;
+    border-radius: 10%;
+    border: 1px black;
+    color: black;
+    transition: .3s ease all;
+    position: relative;
+    overflow: hidden;
+}
+.borrar:hover{
+    color: black;
+    cursor: pointer;
+}
+.borrar::after{
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: none;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transition: .5s ease-in-out all;
+}
+.borrar:hover::after{
+    transform: scale(200);
+    background-color: rgb(184, 27, 27);
+}
+.regresar span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+.regresar{
+    text-decoration: none;
+    background-color: none;
+    border-radius: 10%;
+    border: 1px black;
+    color: black;
+    transition: .3s ease all;
+    position: relative;
+    overflow: hidden;
+}
+.regresar:hover{
+    color: black;
+    cursor: pointer;
+}
+.regresar::after{
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: none;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transition: .5s ease-in-out all;
+}
+.regresar:hover::after{
+    transform: scale(200);
+    background-color: rgb(32, 32, 174);
+    
+}

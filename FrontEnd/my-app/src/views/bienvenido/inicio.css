@@ -1,0 +1,36 @@
+.contenedor1{
+    border-style: ridge;
+    border-radius: 0.3cm;
+    border-color: black;
+    background-color: white;
+    box-shadow: 0 5px 60px 0 black;
+}
+
+.bienvenida{
+    font-size: 50px;
+    font-family: Verdana;
+}
+.parrafo{
+    font-size: 20px;
+    font-family: Arial;
+}
+.btn{
+    background-color: ivory;
+    border-radius: 0.3cm;
+    border-style: ridge;
+    border-color: black;
+    box-shadow: 0 0 5px 0;
+    transition: transform 300ms, box-shadow 300 ms;
+}
+.btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 0;
+}
+hr{
+    visibility: hidden;
+}
+body{
+    background: #4b6cb7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0ABF04, #BDF2CA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0ABF04, #BDF2CA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
