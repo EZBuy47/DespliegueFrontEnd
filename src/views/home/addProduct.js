@@ -18,7 +18,7 @@ function Agregar() {
     var nameU ="";
     const cookies = new Cookies();
     const cook = cookies.get('auth-token');
-    axios.post('http://localhost:4000/api/admin', {
+    axios.post('https://ezbuyb.herokuapp.com/api/admin', {
         cook
     }).then((response) => {
         if (response.data === false) {
@@ -44,7 +44,7 @@ function Agregar() {
     }
 
     const enviarDatos = () => {
-        axios.post('http://localhost:4000/api/product/addproduct', {
+        axios.post('https://ezbuyb.herokuapp.com/product/addproduct', {
             name: name,
             reference: reference,
             price: price,

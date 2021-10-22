@@ -13,7 +13,7 @@ function Update() {
     var id = "";
     const cookies = new Cookies();
     const cook = cookies.get('auth-token');
-    axios.post('http://localhost:4000/api/admin', {
+    axios.post('https://ezbuyb.herokuapp.com/api/admin', {
         cook
     }).then((response) => {
         if (response.data === false) {
@@ -46,7 +46,7 @@ function Update() {
     const idProduct = cookies.get('idProduct')
     console.log(id)
     useEffect(() => {
-        axios.get(`http://localhost:4000/api/product/product/${idProduct}`, {
+        axios.get(`https://ezbuyb.herokuapp.com/api/product/product/${idProduct}`, {
         }).then((response) => {
             console.log(response.data)
             setName(response.data.name)
@@ -57,7 +57,7 @@ function Update() {
         });
     }, []);
     const actualizar = () => {
-        axios.put(`http://localhost:4000/api/product/update/${idProduct}`, {
+        axios.put(`https://ezbuyb.herokuapp.com/api/product/update/${idProduct}`, {
             name: name,
             reference: reference,
             price: price,
@@ -72,7 +72,7 @@ function Update() {
     }
 
     const borrar = () => {
-        axios.delete(`http://localhost:4000/api/product/delete/${idProduct}`, {
+        axios.delete(`https://ezbuyb.herokuapp.com/api/product/delete/${idProduct}`, {
 
         }).then((response) => {
             console.log(response.data.mensaje)

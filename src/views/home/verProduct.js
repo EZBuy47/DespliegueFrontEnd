@@ -13,7 +13,7 @@ function VerProducto() {
 
     var idComprador = ""
     var nameComprador = ""
-    axios.post('http://localhost:4000/api/admin', {
+    axios.post('https://ezbuyb.herokuapp.com/api/admin', {
         cook
     }).then((response) => {
         if (response.data === false) {
@@ -50,7 +50,7 @@ function VerProducto() {
 
     const idProduct = cookies.get('buyProductid');
     useEffect(() => {
-        axios.get(`http://localhost:4000/api/product/product/${idProduct}`, {
+        axios.get(`https://ezbuyb.herokuapp.com/api/product/product/${idProduct}`, {
         }).then((response) => {
             console.log(response.data)
             setName(response.data.name)
@@ -96,7 +96,7 @@ function VerProducto() {
         window.location.replace('./home');
     }
     const compra = () => {
-        axios.post('http://localhost:4000/api/compras/addCompra', {
+        axios.post('https://ezbuyb.herokuapp.com/api/compras/addCompra', {
             nameVendedor: nameP,
             idVendedor: idUser,
             idProduct: idProduct,
@@ -106,7 +106,7 @@ function VerProducto() {
             TotalPago: total
         })
         console.log(nuevaCantidad)
-        axios.put(`http://localhost:4000/api/product/update/${idProduct}`, {
+        axios.put(`https://ezbuyb.herokuapp.com/api/product/update/${idProduct}`, {
             name: name,
             reference: reference,
             price: price,

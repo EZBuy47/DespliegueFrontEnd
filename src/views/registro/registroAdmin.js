@@ -15,7 +15,7 @@ function RegistroAdmin() {
     var error=[];
 
     const enviar = () => {
-        axios.post('http://localhost:4000/api/user/register', {
+        axios.post('https://ezbuyb.herokuapp.com/api/user/register', {
             name: name,
             email: email,
             password: password,

@@ -16,7 +16,7 @@ function MisProductos() {
     var nameUser = ""
     const cookies = new Cookies();
     const cook = cookies.get('auth-token');
-    axios.post('http://localhost:4000/api/admin', {
+    axios.post('https://ezbuyb.herokuapp.com/api/admin', {
         cook
     }).then((response) => {
         if (response.data === false) {
@@ -41,7 +41,7 @@ function MisProductos() {
         console.log("No hay Token")
     }
     useEffect(() => {
-        axios.post('http://localhost:4000/api/product//myProducts', {
+        axios.post('https://ezbuyb.herokuapp.com/api/product//myProducts', {
             idUser: id
         }).then((response) => {
             setListaProductos(response.data);

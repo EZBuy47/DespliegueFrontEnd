@@ -14,7 +14,7 @@ function Login(){
     const[Redireccionar,setRedireccionar]=useState(false);
 
     const enviar = ()=>{
-        axios.post('http://localhost:4000/api/user/loginUser',{
+        axios.post('https://ezbuyb.herokuapp.com/api/user/loginUser',{
             email:email,
             password:password
         }).then(async (response)=>{

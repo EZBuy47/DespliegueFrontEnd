@@ -11,7 +11,7 @@ function Logout() {
     const cookies = new Cookies();
     cookies.remove('auth-token');
     window.location.replace('./');
-    axios.get('http://localhost:4000/api/user/logout').then((response) => {
+    axios.get('https://ezbuyb.herokuapp.com/api/user/logout').then((response) => {
         console.log(response)
     });
     return (

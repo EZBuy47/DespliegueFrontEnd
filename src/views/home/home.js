@@ -13,7 +13,7 @@ function Productos() {
     const cookies = new Cookies();
     const cook = cookies.get('auth-token')
     console.log(cook)
-    axios.post('http://localhost:4000/api/admin', {
+    axios.post('https://ezbuyb.herokuapp.com/api/admin', {
         cook
     }).then((response) => {
         console.log(response.data);
@@ -30,7 +30,7 @@ function Productos() {
         window.location.replace('./');
     }
     useEffect(() => {
-        axios.get('http://localhost:4000/api/product/allProducts', {
+        axios.get('https://ezbuyb.herokuapp.com/api/product/allProducts', {
         }).then((response) => {
             setListaProductos(response.data);
         });

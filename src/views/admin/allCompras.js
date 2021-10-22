@@ -16,7 +16,7 @@ function AllCompras() {
     var nameUser = ""
     const cookies = new Cookies();
     const cook = cookies.get('auth-token');
-    axios.post('http://localhost:4000/api/colsuAdmin', {
+    axios.post('https://ezbuyb.herokuapp.com/api/colsuAdmin', {
         cook
     }).then((response) => {
         console.log(response.data)
@@ -47,7 +47,7 @@ function AllCompras() {
         console.log("No hay Token")
     }
     useEffect(() => {
-        axios.get('http://localhost:4000/api/compras/allCompras', {
+        axios.get('https://ezbuyb.herokuapp.com/api/compras/allCompras', {
         }).then((response) => {
             setListaCompras(response.data);
         });
