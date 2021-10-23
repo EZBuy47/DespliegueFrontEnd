@@ -19,7 +19,7 @@ import RegistroAdmin from "./views/registro/registroAdmin";
 import MisCompras from "./views/compras/comprasUser";
 import AllCompras from "./views/admin/allCompras";
 import VerUsuarios from "./views/admin/verUsuarios";
-
+import LoginGoogle from "./views/login/LoginGoogle";
 
 function App() {
   return (
@@ -41,6 +41,7 @@ function App() {
       <Route exact path= '/misCompras' component={MisCompras} />
       <Route exact path= '/allCompras' component={AllCompras} />
       <Route exact path= '/allUsers' component={VerUsuarios}/>
+      <Route exact path= '/LoginGoogle' component={LoginGoogle}/>
     </div>
   );
 }
